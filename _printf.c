@@ -10,16 +10,24 @@
  */
 int _printf(const char *format, ...)
 {
+	char *s = NULL;
 	int x = 0;
+	va_list args;
+
+	va_start (args, NULL);
+
 	while (format[x])
 	{
 		if (format[x] == '%')
 		{
-			for (c = 0; fmt[c].spec
+			s = (void *)(format + x);
+			get_fmt_func(s + 1)(args);
+			x++;
 		}
 		else
 			_putchar(format[x]);
 		x++;
 	}
+	va_end(args);
 	return (x);
 }
