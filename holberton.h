@@ -16,11 +16,12 @@ typedef struct frmtspec
 int _printf(const char *format, ...);
 int _putchar(char c);
 void _puts(char *str);
-int _strcmp(char *s1,const char *s2);
+int _strcmp(char *s1,char *s2);
 void printstring(va_list);
 void printmodulo(va_list);
 void printchar(va_list);
 void printint(va_list args);
-void (*get_fmt_func(const char *s))(va_list);
+void print_number(int n);
+void (*get_fmt_func(char *s))(va_list);
 
 #endif

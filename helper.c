@@ -6,9 +6,9 @@
  * Return: a function
  */
 
-void (*get_fmt_func(const char *s))(va_list)
+void (*get_fmt_func(char *s))(va_list)
 {
-	int i;
+	int i = 0;
 
 	fmt_s forms[] = {
 		{"c", printchar},

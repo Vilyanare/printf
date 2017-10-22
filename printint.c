@@ -8,5 +8,5 @@
 
 void printint(va_list args)
 {
-	_putchar(va_arg(args, int));
+	print_number(va_arg(args, int));
 }
