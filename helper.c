@@ -6,7 +6,7 @@
  * Return: a function
  */
 
-void (*get_fmt_func(char *s))(va_list)
+void (*get_fmt_func(char *s))(va_list, int *)
 {
 	int i = 0;
 
@@ -15,6 +15,7 @@ void (*get_fmt_func(char *s))(va_list)
 		{"s", printstring},
 		{"d", printint},
 		{"i", printint},
+		{"%", printmodulo},
 		{NULL, NULL}
 	};
 

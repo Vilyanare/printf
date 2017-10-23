@@ -10,18 +10,17 @@
 typedef struct frmtspec
 {
 	char *fmt;
-	void (*func)(va_list);
+	void (*func)(va_list, int *);
 } fmt_s;
-
 int _printf(const char *format, ...);
-int _putchar(char c);
-void _puts(char *str);
+int _putchar(char c, int *);
+void _puts(char *str, int *);
 int _strcmp(char *s1,char *s2);
-void printstring(va_list);
-void printmodulo(va_list);
-void printchar(va_list);
-void printint(va_list args);
-void print_number(int n);
-void (*get_fmt_func(char *s))(va_list);
+void printstring(va_list, int *);
+void printmodulo(va_list, int *);
+void printchar(va_list, int *);
+void printint(va_list, int *);
+void print_number(int n, int *);
+void (*get_fmt_func(char *s))(va_list, int *);
 
 #endif
