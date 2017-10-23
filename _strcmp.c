@@ -9,7 +9,7 @@
  *positive if str 1 is greater than str 2
  *zero if strings are even
  */
-int _strcmp(char *s1,char *s2)
+int _strcmp(char *s1, char *s2)
 {
 	int c;
 

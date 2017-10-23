@@ -10,24 +10,34 @@
  */
 int _printf(const char *format, ...)
 {
+	void (*f)(va_list, int *);
 	char *s = NULL;
 	int x = 0;
 	va_list args;
+	int charcounter = 0;
+	int *p = &charcounter;
 
-	va_start (args, NULL);
+	va_start(args, NULL);
 
 	while (format[x])
 	{
 		if (format[x] == '%')
 		{
 			s = (void *)(format + x);
-			get_fmt_func(s + 1)(args);
+			f = get_fmt_func(s + 1);
+			if (f == NULL)
+			{
+				_putchar('%', p);
+				_putchar(s[1], p);
+			}
+			else
+				f(args, p);
 			x++;
 		}
 		else
-			_putchar(format[x]);
+			_putchar(format[x], p);
 		x++;
 	}
 	va_end(args);
-	return (x);
+	return (charcounter);
 }
