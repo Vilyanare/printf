@@ -22,5 +22,7 @@ void printchar(va_list, int *);
 void printint(va_list, int *);
 void print_number(int n, int *);
 void (*get_fmt_func(char *s))(va_list, int *);
+void print_unumber(unsigned int n, int *);
+void printunsign(va_list, int *);
 
 #endif

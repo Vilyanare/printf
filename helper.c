@@ -16,6 +16,7 @@ void (*get_fmt_func(char *s))(va_list, int *)
 		{"d", printint},
 		{"i", printint},
 		{"%", printmodulo},
+		{"u", printunsign},
 		{NULL, NULL}
 	};
 
