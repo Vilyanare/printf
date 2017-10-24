@@ -20,7 +20,9 @@ void printstring(va_list, int *);
 void printmodulo(va_list, int *);
 void printchar(va_list, int *);
 void printint(va_list, int *);
+void DintoB(va_list args, int *);
 void print_number(int n, int *);
+void printbinary(int n, int *);
 void (*get_fmt_func(char *s))(va_list, int *);
 
 #endif
