@@ -1,6 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
-/**
+/*
  * DintoB - Takes in integer and turns it into binary
  * @args: Integer being received
  * @p: Pointer to counter
