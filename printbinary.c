@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stdio.h>
 /**
  * DintoB - Takes in integer and turns it into binary
  * @args: Integer being received
@@ -7,17 +7,23 @@
  * Return: Void
  */
 
-void printbinary(int n, int *p)
+void printbinary(unsigned int n, int *p)
 {
-	int remain;
-	unsigned int binary = 0, i = 1;
+	int remain = 0;
 
-	while (n != 0)
+	if (n == 0)
+	{
+		_putchar(remain + '0', p);
+	}
+	else if (n == 1)
+	{
+		_putchar('1', p);
+	}
+	else
 	{
 		remain = n % 2;
 		n = n / 2;
-		binary = binary + (remain * i);
-		i = i * 10;
+		printbinary(n, p);
+		_putchar(remain + '0', p);
 	}
-	print_number(binary, p);
 }

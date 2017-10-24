@@ -43,7 +43,10 @@ int main(void)
 //    printf("Unknown:[%r]\n");
 	insigned int n = args;
 	insigned int n = args;
-*/   _printf("98 in Binary: [%b]\n", 98);
+*/	_printf("98 in Binary: [%b]\n", 98);
+	_printf("12,000,000 in Binary: [%b]\n", 12000000);
+	_printf("0 in Binary: [%b]\n", 0);
+	_printf("-98 in Binary: [%b]\n", -98);
 
     return (0);
 }
