@@ -33,9 +33,9 @@ int main(void)
     printf("Character:[%c]\n", 'H');
     _printf("String:[%s]\n", "I am a string !");
     printf("String:[%s]\n", "I am a string !");
-/*    _printf("Address:[%p]\n", addr);
-//    printf("Address:[%p]\n", addr);
-*/    len = _printf("Percent:[%%]\n");
+	_printf("Address:[%p]\n", addr);
+	printf("Address:[%p]\n", addr);
+    len = _printf("Percent:[%%]\n");
     len2 = printf("Percent:[%%]\n");
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
@@ -44,7 +44,13 @@ int main(void)
 //    printf("Unknown:[%r]\n");
 	insigned int n = args;
 	insigned int n = args;
-*/   _printf("98 in Binary: [%b]\n", 98);
+*/	_printf("128 in Binary: [%b]\n", 128);
+	_printf("98 in Binary: [%b]\n", 98);
+	_printf("12,000,000 in Binary: [%b]\n", 12000000);
+	_printf("0 in Binary: [%b]\n", 0);
+	_printf("-98 in Binary: [%b]\n", -98);
+	_printf("-1 in Binary: [%b]\n", -1);
+	_printf("-128 in Binary: [%b]\n", -128);
 
     return (0);
 }
