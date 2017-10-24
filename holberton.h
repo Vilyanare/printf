@@ -24,5 +24,9 @@ void DintoB(va_list args, int *);
 void print_number(int n, int *);
 void printbinary(int n, int *);
 void (*get_fmt_func(char *s))(va_list, int *);
+void print_unumber(unsigned int n, int *);
+void printunsign(va_list, int *);
+void dtooprint(va_list, int *);
+void _dtooprint(unsigned int, int*);
 
 #endif
