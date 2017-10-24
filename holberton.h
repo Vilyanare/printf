@@ -28,5 +28,7 @@ void print_unumber(unsigned int n, int *);
 void printunsign(va_list, int *);
 void dtooprint(va_list, int *);
 void _dtooprint(unsigned int, int*);
+void dtoxprint(va_list, int*);
+void _dtoxprint(unsigned int, int*);
 
 #endif
