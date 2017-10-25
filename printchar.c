@@ -9,11 +9,5 @@
 
 void printchar(va_list args, int *p)
 {
-	int pn = va_arg(args, int);
-        if (pn == 0)
-	{
-                _puts("(null)", p);
-		return;
-	}
-	_putchar(pn, p);
+	_putchar(va_arg(args, int), p);
 }

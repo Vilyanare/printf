@@ -9,7 +9,5 @@
 
 void pointadd(va_list args, int *p)
 {
-	unsigned long int n = va_arg(args, void*);
-	
-	printaddress(n, p);
+	printaddress(va_arg(args, unsigned long int), p);
 }
