@@ -24,6 +24,7 @@ void (*get_fmt_func(char *s))(va_list, int *)
 		{"p", pointadd},
 		{"S", printString},
 		{"r", streverse},
+		{"R", printrot},
 		{NULL, NULL}
 	};
 
