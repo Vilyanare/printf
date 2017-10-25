@@ -9,7 +9,5 @@
 
 void printint(va_list args, int *p)
 {
-	int np = va_arg(args, int);
-	
-	print_number(np, p);
+	print_number(va_arg(args, int), p);
 }
