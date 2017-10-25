@@ -40,9 +40,9 @@ int main(void)
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
     _printf("%S\n", "Holberton\nSchool");
-/*    _printf("Unknown:[%r]\n");
-//    printf("Unknown:[%r]\n");
-	insigned int n = args;
+    _printf("Reversed 'String':[%r]\n", "String");
+    _printf("Reversed 'Don't work for Pickle Rick':[%r]\n", "Don't work for Pickle Rick");
+/*	insigned int n = args;
 	insigned int n = args;
 */	_printf("128 in Binary: [%b]\n", 128);
 	_printf("98 in Binary: [%b]\n", 98);
@@ -51,6 +51,6 @@ int main(void)
 	_printf("-98 in Binary: [%b]\n", -98);
 	_printf("-1 in Binary: [%b]\n", -1);
 	_printf("-128 in Binary: [%b]\n", -128);
-
+	_printf("Encoding 'this message' in rot13: %R\n", "this message");
     return (0);
 }
