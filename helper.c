@@ -21,6 +21,7 @@ void (*get_fmt_func(char *s))(va_list, int *)
 		{"o", dtooprint},
 		{"x", dtoxprint},
 		{"X", dtoxprint},
+		{"p", pointadd},
 		{NULL, NULL}
 	};
 
