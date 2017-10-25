@@ -34,5 +34,8 @@ void dtooprint(va_list, int *);
 void _dtooprint(unsigned int, int*);
 void dtoxprint(va_list, int*);
 void _dtoxprint(unsigned int, int*);
+void printString(va_list, int*);
+void _printString(char*, int*);
+void _dtoxcode(unsigned int, int*);
 
 #endif
