@@ -51,6 +51,6 @@ int main(void)
 	_printf("-98 in Binary: [%b]\n", -98);
 	_printf("-1 in Binary: [%b]\n", -1);
 	_printf("-128 in Binary: [%b]\n", -128);
-
+	_printf("Encoding 'this message' in rot13: %R\n", "this message");
     return (0);
 }
