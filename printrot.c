@@ -9,5 +9,8 @@
 
 void printrot(va_list args, int *p)
 {
-	rot13(va_arg(args, char *), p);
+	void *pn = va_arg(args, void*);
+        if (pn == NULL)
+                _puts("(null)", p);
+	rot13(pn, p);
 }

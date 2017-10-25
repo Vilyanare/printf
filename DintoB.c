@@ -9,5 +9,7 @@
 
 void DintoB(va_list args, int *p)
 {
-	printbinary(va_arg(args, int), p);
+	unsigned int pn = va_arg(args, void*);
+
+	printbinary(pn, p);
 }

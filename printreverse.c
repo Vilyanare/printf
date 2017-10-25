@@ -9,6 +9,9 @@
 
 void streverse(va_list args, int *p)
 {
-	_revs(va_arg(args, char *), p);
+	void *pn = va_arg(args, void*);
+	if (pn == NULL)
+		_puts("(null)", p);
+	_revs(pn, p);
 }
 

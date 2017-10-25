@@ -9,5 +9,11 @@
 
 void printstring(va_list args, int *p)
 {
-	_puts(va_arg(args, char *), p);
+	char *pn = va_arg(args, char *);
+	if (pn == NULL)
+	{
+		_puts("(null)", p);
+		return;
+	}
+	_puts(pn, p);
 }

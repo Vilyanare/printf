@@ -9,5 +9,7 @@
 
 void printunsign(va_list args, int *p)
 {
-	print_unumber(va_arg(args, unsigned int), p);
+	unsigned int np = va_arg(args, unsigned int);
+
+	print_unumber(np, p);
 }
