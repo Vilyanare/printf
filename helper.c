@@ -20,7 +20,7 @@ void (*get_fmt_func(char *s))(va_list, int *)
 		{"u", printunsign},
 		{"o", dtooprint},
 		{"x", dtoxprint},
-		{"X", dtoxprint},
+		{"X", dtoXprint},
 		{"p", pointadd},
 		{"S", printString},
 		{NULL, NULL}

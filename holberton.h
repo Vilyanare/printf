@@ -37,5 +37,6 @@ void _dtoxprint(unsigned int, int*);
 void printString(va_list, int*);
 void _printString(char*, int*);
 void _dtoxcode(unsigned int, int*);
+void dtoXprint(va_list, int*);
 
 #endif
