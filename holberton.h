@@ -16,7 +16,9 @@ typedef struct frmtspec
 int _printf(const char *format, ...);
 int _putchar(char c, int *);
 void _puts(char *str, int *);
+void _revs(char *str, int *);
 int _strcmp(char *s1,char *s2);
+void streverse(va_list, int *);
 void pointadd(va_list, int *);
 void printstring(va_list, int *);
 void printmodulo(va_list, int *);
