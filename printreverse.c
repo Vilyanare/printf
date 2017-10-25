@@ -1,19 +1,17 @@
 #include "holberton.h"
 
 /**
- * printstring - Print the arguments
+ * streverse - Reverse the argument string
  * @args: Argument coming in
  * @p: pointer to a char counter
  * Return: Void
  */
 
-void printstring(va_list args, int *p)
+void streverse(va_list args, int *p)
 {
-	char *pn = va_arg(args, char *);
+	void *pn = va_arg(args, void*);
 	if (pn == NULL)
-	{
 		_puts("(null)", p);
-		return;
-	}
-	_puts(pn, p);
+	_revs(pn, p);
 }
+

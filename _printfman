@@ -22,19 +22,42 @@ A character that signifies the type of conversion to be applied. the format spec
 .BR d ", " i
 The
 .I int
-argument is converted to decimal notation.
+argument is converted to signed decimal notation.
 .TP
 .B c
 The
-.I int
-argument is converted to and
+.IR "int"
+argument is converted to an
 .IR "unsigned char" ,
 and the resulting character is written.
 .TP
-.B s
+.B "s, S"
 The
 .I char *
-argument is expected to be a pointer to an array of a character type (pointer to a string). Characters from the array are written up to (but not including) a terminating null byte ('\\0').
+argument is expected to be a pointer to an array of a character type (pointer to a string). Characters from the array are written up to (but not including) a terminating null byte ('\\0').  The (S)  is the same as (s) but it prints the unprintable characters as hex codes. (\\x0A)
+.TP
+.BR o ", " u ", " b ", " x ", " X
+The
+.IR "unsigned int"
+argument is converted to unsigned octal (o), unsigned decimal (u), unsigned binary (b), or unsigned hexadecimal (x and X) notation.  The letters abcdef are used for x conversions; the letters ABCDEF are used for X conversions.
+.TP
+.B r
+The
+.IR "char *"
+argument is printed in reverse.
+.TP
+.B R
+The
+.IR "char *"
+argument is encoded into Rot13.
+.TP
+.B p
+The
+.IR "void *"
+pointer argument is printed in hexadecimal.
+.TP
+.B %
+A '%' is written. No argument is converted. The complete conversion specification is '%%'.
 .SH BUGS
 We don't have bugs bro.
 .SH AUTHORS

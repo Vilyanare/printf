@@ -7,9 +7,9 @@
  * Return: Void
  */
 
-void printint(va_list args, int *p)
+void DintoB(va_list args, int *p)
 {
-	int np = va_arg(args, int);
-	
-	print_number(np, p);
+	unsigned int pn = va_arg(args, void*);
+
+	printbinary(pn, p);
 }
