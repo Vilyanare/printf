@@ -14,28 +14,28 @@ int _printf(const char *format, ...)
 	char *s = NULL;
 	int x = 0;
 	va_list args;
-	int charcounter = 0;
+	int charcounter = 0; /*Character counter*/
 	int *p = &charcounter;
 
 	va_start(args, NULL);
 
-	while (format[x])
+	while (format[x] != 0) /*Look through format string*/
 	{
-		if (format[x] == '%')
+		if (format[x] == '%') /*Check format string for format specifier*/
 		{
-			s = (void *)(format + x);
-			f = get_fmt_func(s + 1);
-			if (f == NULL)
+			s = (void *)(format + x); /*Recast format into a char string*/
+			f = get_fmt_func(s + 1); /*Look for format specifier and return function*/
+			if (f == NULL) /*If format specifier wasn't found*/
 			{
-				_putchar('%', p);
-				_putchar(s[1], p);
+				_putchar('%', p); /*Print modulus*/
+				_putchar(s[1], p); /*Print char after modulus*/
 			}
-			else
-				f(args, p);
+			else /*If format specifier was found*/
+				f(args, p); /*Execute function associated with format specifier*/
 			x++;
 		}
-		else
-			_putchar(format[x], p);
+		else /*While format specifier isn't found*/
+			_putchar(format[x], p); /*Print each char of the format string*/
 		x++;
 	}
 	va_end(args);

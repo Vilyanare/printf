@@ -25,11 +25,13 @@ void (*get_fmt_func(char *s))(va_list, int *)
 		{NULL, NULL}
 	};
 
-	while (forms[i].fmt != NULL)
+	while (forms[i].fmt != NULL) /*Loops through struct until NULL*/
 	{
-		if (_strcmp(forms[i].fmt, s) == 0)
-			return (forms[i].func);
+		if (_strcmp(forms[i].fmt, s) == 0) /*Compares *s to see if it is equal to
+						     *first member of struct*/
+			return (forms[i].func); /*Returns function associated with 
+						  *format specifier*/
 		i++;
 	}
-	return (NULL);
+	return (NULL); /*If no match returns NULL*/
 }
