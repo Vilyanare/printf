@@ -23,6 +23,7 @@ void (*get_fmt_func(char *s))(va_list, int *)
 		{"X", dtoxprint},
 		{"p", pointadd},
 		{"S", printString},
+		{"r", streverse},
 		{NULL, NULL}
 	};
 
