@@ -57,6 +57,7 @@ char *_strcpy(char *dest, char *src)
 /**
  * *rot13 - rot13 encrypt all letters of the alphabet in a string
  * @c: Character declared as s in the main file
+ * @p: Pointer to character counter
  * Return: c
  */
 void rot13(char *c, int *p)
@@ -64,8 +65,8 @@ void rot13(char *c, int *p)
 	char *rot = NULL;
 	int n = 0;
 
-	rot = malloc (sizeof(char) * _strlen(c) + 1);
-	_strcpy(rot, c); 
+	rot = malloc(sizeof(char) * _strlen(c) + 1);
+	_strcpy(rot, c);
 	while (rot[n] != '\0')
 	{
 		while ((rot[n] >= 'a' && rot[n] <= 'z') ||
@@ -89,7 +90,7 @@ void rot13(char *c, int *p)
 	free(rot);
 }
 /**
- * printrot - Translates argument to rot13 and prints to output 
+ * printrot - Translates argument to rot13 and prints to output
  * @args: Argument coming in
  * @p: pointer to a char counter
  * Return: Void

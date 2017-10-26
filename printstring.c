@@ -1,5 +1,4 @@
 #include "holberton.h"
-
 /**
  * printstring - Print the arguments
  * @args: Argument coming in
@@ -18,12 +17,13 @@ void printstring(va_list args, int *p)
 void printString(va_list args, int *p)
 {
 	char *s = va_arg(args, char *);
+
 	_printString(s, p);
 }
 /**
   * _printString - Print strings with unprintables as hex
   *@s: string to print
-  *@p; pointer to char counter
+  *@p: pointer to char counter
   */
 void _printString(char *s, int *p)
 {

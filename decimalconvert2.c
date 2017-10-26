@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * printint - Print the arguments
+ * DintoB - Turn decimal to binary
  * @args: Argument coming in
  * @p: pointer to a char counter
  * Return: Void
@@ -15,18 +15,18 @@ void DintoB(va_list args, int *p)
   *@args: number to print
   *@p: pointer to char counter
   */
-void dtoXprint(va_list args, int *p) 
+void dtoXprint(va_list args, int *p)
 {
-        unsigned int n = va_arg(args, unsigned int);
+	unsigned int n = va_arg(args, unsigned int);
 
-        _dtoxcode(n, p); 
+	_dtoxcode(n, p);
 }
 /**
   * _dtoxlong - prints a hex conversion of a decimal
   *@n: decimal number
   *@p: pointer to a char counter
   */
-void _dtoxlong(long unsigned int n, int *p)
+void _dtoxlong(unsigned long int n, int *p)
 {
 	if (n / 16 > 0)
 		_dtoxlong(n / 16, p);
