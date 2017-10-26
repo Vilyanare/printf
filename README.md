@@ -34,7 +34,9 @@ For example:
 Will produce a string into the output that says:
 "Hello World"
 
-## File Descriptions
+## File descriptions
+---
+File|Descriptions
 ---|---
 \_printf.c | Executes \_printf function
 holberton.h | Function protoypes & struct typef
@@ -48,7 +50,7 @@ decimalconvert.c | Functions that convert decimals into other types of int
 decimalconvert2.c | More functions that convert decimals
 print\_special.c | Miscellaneous cases for printing (modulo, reverse, unsigned ints, etc.)
 README.md | Summary of the program and instructions on how to use \_printf
-
+---
 ## Authors
 	*Dimitrios Philliou* - [Github] (https://github.com/DimitriCat)
 	*Thomas Dumont* - [Github] (https://github.com/Vilyanare)
